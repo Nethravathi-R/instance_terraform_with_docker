@@ -10,7 +10,7 @@ pipeline {
     stages {
         stage('Checkout') {
             steps {
-                checkout 'https://github.com/Harshahd97/instance_terraform_with_docker.git'
+                checkout scm
             }
         }
 
@@ -29,4 +29,5 @@ pipeline {
                 }
             }
         }
+    }
 }
