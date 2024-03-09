@@ -2,16 +2,16 @@ pipeline {
     agent any
 
     environment {
-        AWS_ACCESS_KEY_ID     = credentials('aws-access-key')
-        AWS_SECRET_ACCESS_KEY = credentials('aws-secret-key')
+        AWS_DEFAULT_REGION = 'ap-northeast-1'
+        TF_VAR_aws_access_key = credentials('aws-access-key')
+        TF_VAR_aws_secret_key = credentials('aws-secret-key')
     }
-    
+
     stages {
         stage('Checkout') {
             steps {
-                // Checkout your Terraform configuration files from version control
                 sh 'rm -rf instance_terraform_with_docker'
-                git 'https://github.com/Harshahd97/instance_terraform_with_docker.git'
+                checkout scm
             }
         }
         
