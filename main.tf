@@ -26,7 +26,7 @@ resource "aws_security_group" "allow_SG" {
 # Security group end here
 
 resource "aws_instance" "example" {
-  ami                    = "ami-00247e9dc9591c233"
+  ami                    = "ami-03bb6d83c60fc5f7c"
   instance_type          = "t2.micro"
   security_groups        = [aws_security_group.allow_SG.name]
   user_data              = file("docker.sh")
