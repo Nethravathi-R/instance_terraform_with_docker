@@ -1,5 +1,5 @@
 pipeline {
-    agent any
+    agent {dockerfile true}
 
     environment {
         AWS_DEFAULT_REGION = 'ap-northeast-1'
@@ -41,6 +41,7 @@ pipeline {
                 }
             }
         } 
+		
         stage('Destroy') {
             steps {
                 // Destroy the provisioned infrastructure
