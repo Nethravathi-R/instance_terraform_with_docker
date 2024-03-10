@@ -1,1 +1,0 @@
-# instance_terraform_with_docker
