@@ -1,5 +1,5 @@
 pipeline {
-    agent {Dockerfile true}
+    agent { dockerfile true }
 
     environment {
         AWS_DEFAULT_REGION = 'ap-south-1'
