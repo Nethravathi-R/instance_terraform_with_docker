@@ -6,8 +6,8 @@ pipeline {
 
     environment {
         AWS_DEFAULT_REGION = 'ap-south-1'
-            aws_access_key = credentials('aws-access-key')
-            aws_secret_key = credentials('aws-secret-key')
+            aws_access_key = credentials('aws_access_key')
+            aws_secret_key = credentials('aws_secret_key')
     }
 
     stages {
