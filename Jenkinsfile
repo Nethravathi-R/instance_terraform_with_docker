@@ -11,7 +11,7 @@ pipeline {
         stage('Checkout') {
             steps {
                 sh 'rm -rf instance_terraform_with_docker'
-                checkout scm
+                sh 'git clone https://github.com/Harshahd97/instance_terraform_with_docker.git'
             }
         }
         
@@ -41,14 +41,5 @@ pipeline {
                 }
             }
         } 
-		
-        stage('Destroy') {
-            steps {
-                // Destroy the provisioned infrastructure
-                script {
-                    sh 'terraform destroy -auto-approve'
-                }
-            }
-        }
     }
 }
