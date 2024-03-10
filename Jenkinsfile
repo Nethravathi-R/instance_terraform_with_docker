@@ -1,8 +1,6 @@
 pipeline {
     agent {
-        docker {
-            // Path to the Dockerfile
-            file '/main/Dockerfile'
+        dockerfile true
         }
     }
 
